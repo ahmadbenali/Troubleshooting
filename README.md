@@ -86,6 +86,18 @@ A “clean boot” starts Windows with a minimal set of drivers and startup prog
 > [!IMPORTANT]
 > this will reduce all appearance settings you have but will optimize the performance of the PC.
 
+### Method 4. Chris titus tool (Recommended one)
+
+- open terminal using admin mode
+- `iwr -useb https://christitus.com/win | iex`
+- will open a tool
+- choes whatever you want to download (IF YOU JUST NOW INSTALL WINDWOS)
+- if you have a long time with window,go to tweaks then stander
+- chose debloat edge and whatever you want
+- finally, RUN tweaks and restart the pc
+> [!NOTE]
+> for more info [Windows Utility Improved for 2024](https://youtu.be/5_AaHXrelTE?si=Cldx7EfRuN8Zf1-3)
+
 
 
 
