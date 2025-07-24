@@ -40,13 +40,15 @@ to find if the process is working in background
 pgrep <process_name> 
 this will give you an PID number for this process
 
-> Note : put the command without ( < > )
+> [!NOTE]
+> put the command without ( < > )
 
 to kill process
 Kill <with PID>
 this will kill the process
 
-> Note : put the command without ( < > )
+> [!NOTE]
+> put the command without ( < > )
 
 and now you can open it and will work .
 
@@ -81,7 +83,8 @@ A “clean boot” starts Windows with a minimal set of drivers and startup prog
 
 - click on Advanced system settings> Under Performance click settings> Click Adjust for best performance and click OK
 
-> Note: this will reduce all appearance settings you have but will optimize the performance of the PC.
+> [!IMPORTANT]
+> this will reduce all appearance settings you have but will optimize the performance of the PC.
 
 
 
