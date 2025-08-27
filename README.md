@@ -115,6 +115,34 @@ Employ pipx for Command-Line Applications:
 1. sudo apt install pipx
 2. pipx install some-python-application
 
+## Black screen with underscore in left-corner 
+
+issue with the nvidia card (if you have one), kernel can't communicate with the nvidia-driver.
+
+### the solution is to remove everything about nvidia and install the last version of driver.
+you can do that by using another pc to control the linux using ssh 
+
+On linux:
+1. sudo apt install ssh (if it's not installed)
+2. sudo systemctl enable --now ssh
+3. /lib/systemd/systemd-sysv-install enable ssh
+4. ip a (go to wlo1 and take the ip address)
+
+On other pc (maybe windows):
+1. open powershell using admin
+2. ssh <nameOfTheLinuxPc>@<ip_address>
+3. search on broswer Nvidia drivers and search for your card(50,40,30..) for last driver
+4. copy link address of download button
+5. wget <link_address_of_download_button>
+6. sudo apt remove --purge nvidia* cuda* libnvidia*
+7. sudo chmod +x <nameOfTheFileInstalled>
+8. sudo ./<nameOfTheFileInstalled>
+9. sudo reboot
+
+And done.
+   
+
+
 
 
 
