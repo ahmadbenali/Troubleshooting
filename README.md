@@ -135,8 +135,8 @@ On other pc (maybe windows):
 4. copy link address of download button
 5. wget <link_address_of_download_button>
 6. sudo apt remove --purge nvidia* cuda* libnvidia*
-7. sudo chmod +x <nameOfTheFileInstalled>
-8. sudo ./<nameOfTheFileInstalled>
+7. sudo chmod +x nameOfTheFileInstalled
+8. sudo ./nameOfTheFileInstalled
 9. sudo reboot
 
 And done.
