@@ -140,7 +140,23 @@ On other pc (maybe windows):
 9. sudo reboot
 
 And done.
-   
+
+## Can't Open Brave 
+
+if you see this error:
+> [5867:5867:0903/210413.189833:ERROR:chrome/browser/process_singleton_posix.cc:358] The profile appears to be in use by another Brave process (5560) on another computer (AHMAD). Brave has > locked the profile so that it doesn't get corrupted. If you are sure no other processes are using this profile, you can unlock the profile and relaunch Brave.
+> [5867:5867:0903/210413.189963:ERROR:chrome/browser/ui/views/message_box_dialog.cc:198] Unable to show message box: Brave - The profile appears to be in use by another Brave process (5560) > on another computer (AHMAD). Brave has locked the profile so that it doesn't get corrupted. If you are sure no other processes are using this profile, you can unlock the profile and
+> relaunch Brave.
+
+You have to search for `SingletonLock` and remove it!
+
+### Solution
+1. go to the package manager where you use it to install brave like : snap or apt ...
+2. then go to brave directory
+3. then type this command `find -iname SingletonLock` to find if there any file with this name, this will show a path for the files
+4. then type `rm` before the path and type `update and upgrade`
+
+And Done . . . 
 
 
 
