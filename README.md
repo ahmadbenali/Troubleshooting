@@ -158,6 +158,16 @@ You have to search for `SingletonLock` and remove it!
 
 And Done . . . 
 
+## Can't find viusr and threat protection , ERROR page not found call IT 
+
+follow these steps:
+1. press windows_key+r
+2. type -> regedit
+3. Navigate to this path: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
+4. delete folder/key with name Policy Manager .
+
+Just like that. now try to search virus & threat protection you will find it :)
+
 
 
 
