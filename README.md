@@ -168,6 +168,33 @@ follow these steps:
 
 Just like that. now try to search virus & threat protection you will find it :)
 
+## Change sleep sittings in gnome debian
+1. Configure the Hibernate Delay
+You need to edit the systemd sleep configuration file to set how long the computer should stay asleep before transitioning to hibernation.
+
+- Open the file in your terminal:`sudo nano /etc/systemd/sleep.conf`
+- Look for the line #HibernateDelaySec=180min (or it might say 1200s).
+- Remove the # to uncomment it, and set your desired time. For example, to hibernate after 30 minutes of sleep, change it to:
+HibernateDelaySec=30min
+
+2. Force GNOME to Use "Suspend-then-Hibernate"
+By default, GNOME's power menu only switches between standard sleep or power off. To force the system to use our new delay rule, we need to modify the login manager (logind) behavior.
+
+- Open the logind configuration file:`sudo nano /etc/systemd/logind.conf`
+- Find the lines for closing the lid or pressing the power button, and change their values to suspend-then-hibernate:
+```
+HandlePowerKey=suspend-then-hibernate
+HandleLidSwitch=suspend-then-hibernate
+HandleLidSwitchExternalPower=suspend-then-hibernate
+```
+3. Rebuild Bootloader and Restart
+Your system will continue to ignore hibernation and throw the "Not enough suitable swap space" error until you update the bootloader. The kernel must reload your GRUB configuration to safely map the swap file.
+
+- Run these two commands right now:
+```
+sudo update-grub
+sudo reboot
+```
 
 
 
